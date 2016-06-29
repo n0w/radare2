@@ -10,6 +10,7 @@
 #include <r_list.h> // radare linked list
 #include <r_flist.h> // radare fixed pointer array iterators
 #include <list.h> // kernel linked list
+#include <r_skiplist.h> // skiplist
 #include <r_th.h>
 #include <dirent.h>
 #include <sys/time.h>
@@ -321,6 +322,7 @@ R_API RStack *r_stack_new (unsigned int n);
 R_API void r_stack_free (RStack *s);
 R_API int r_stack_push (RStack *s, void *el);
 R_API void *r_stack_pop (RStack *s);
+R_API void *r_stack_peek (RStack *s);
 R_API int r_stack_is_empty (RStack *s);
 R_API unsigned int r_stack_size (RStack *s);
 
